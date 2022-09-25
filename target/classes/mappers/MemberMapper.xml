@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="memberMapper">
+   
+    <update id="memberUpdate">
+        <![CDATA[ 
+            UPDATE 
+                tbl_member
+            SET
+                memberaddress = #{memberaddress},
+                phone = #{phone},
+        ]]>
+            <if test="cbno != null and cbno != ''">
+                cbno = #{cbno},
+            </if>
+            <if test="fid != null and fid != ''">
+                fid = #{fid, jdbcType=INTEGER},
+            </if>
+                email = #{email}
+            WHERE
+                memberid = #{memberid}
+        
+    </update>
+
+    <select id="getMember" resultType="com.korea.gfair.domain.MemberVO">
+        <![CDATA[ 
+            SELECT
+                *
+            FROM
+                tbl_member
+            WHERE
+                memberid = #{memberid}
+        ]]>
+    </select>
+
+    <select id="checkInfoCount" resultType="int">
+        <![CDATA[ 
+            SELECT
+                count(mno)
+            FROM
+                tbl_member
+            WHERE
+                memberid != #{memberid}
+                AND ( phone = #{phone} 
+        ]]>
+                <if test="cbno != null and cbno != ''">
+                   OR cbno = #{cbno}
+                </if>
+                    OR email = #{email})
+        
+    </select>
+</mapper>

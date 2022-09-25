@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.korea.gfair.mapper.ExhibitionMapper">
+
+    <select id="get" resultType="com.korea.gfair.domain.ExhibitionVO">
+        <![CDATA[ 
+            SELECT
+                *
+            FROM
+                tbl_exhibition
+            WHERE
+                exno = #{exno}
+        ]]>
+    </select>
+    <select id="getList" resultType="com.korea.gfair.domain.ExhibitionVO">
+        <![CDATA[ 
+            SELECT 
+                /*+ index_desc(tbl_board) */ *
+            FROM 
+                tbl_exhibition
+        
+        ]]>
+    </select>
+</mapper>

@@ -1,0 +1,70 @@
+
+#wrapper{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    
+    font-size: initial;
+}
+
+#inner_con{
+    height: 500px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+
+    
+    
+}
+
+#buttons{
+	display: flex;
+    justify-content: center;
+}
+
+input#memberpw{
+    display: block;
+    width: 498px;
+    height: 30px;
+
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+    border: none;
+    border-bottom: 1px solid grey;
+
+    align-self: stretch;
+
+}
+
+#passBtn{
+    cursor: pointer;
+    border: solid 1px #005bbb;
+    background-color: #005bbb;
+    color: white;
+
+    width: 100px;
+    height: 40px;
+    margin-bottom: 1px;
+}
+
+#inner_con h4{
+    color: #005bbb;
+    margin: 0;
+}
+
+#inner_con h2{
+    text-align: center;
+
+    font-size: large;
+
+}
+
+#passAuth{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: auto;
+    
+}

@@ -1,0 +1,46 @@
+
+
+    #wrapper{
+        width: 1200px;
+        
+
+        justify-content: center;
+        display: flex;
+        
+        font-size: initial;
+        
+    }
+
+    
+
+    #con1{
+        height: 200px;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 50px;
+    }
+
+    #con2{
+        height: 150px;
+
+        display: flex;
+        justify-content: center;
+        margin-right: 5px;
+    }
+    
+    #con2 button{
+        cursor: pointer;
+        border: solid 1px #005bbb;
+        background-color: #005bbb;
+        color: white;
+
+        width: 100px;
+        height: 40px;
+        margin-bottom: 1px;
+        margin-right: 5px;
+    }
+
+    #cancelBtn{
+        background-color:  #7397bd !important;
+        border: solid 1px #7397bd !important;
+    }

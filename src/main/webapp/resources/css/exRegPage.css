@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+
+
+button:hover {
+   cursor: pointer;
+}
+
+table {
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    width: 40%;
+    font-size: 20px;
+    background-color: rgb(187, 187, 187, 0.3);
+}
+th, td {
+    border: 1px solid rgb(187, 187, 187);
+}
+.buttonstyle {
+    right: 0px;
+    height: 60px;
+    width: 300px;
+    
+    margin: 20px 0px 10px 0px;
+    border: 0px;
+    
+    font-size: 20px;
+    font-weight: bold;
+
+    color: white;
+    background-color: #005bbb;
+}
+
+/* ----------------------------------------------- */
+
+#exModifyForm input,textarea {
+    font-size: 15px;
+    padding: 5px;
+    width: 98%;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#exRegisterForm input,textarea {
+    font-size: 15px;
+    padding: 5px;
+    width: 98%;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* ------------------------register----------------------- */
+/* 게시판명 */
+.bnameSize {
+    margin: 20px 0px 10px 0px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.fontLine {
+    border-top: 3px solid #005bbb;
+    width: 100%;
+}
+/* content fontSize */
+.fontSize {
+    width: 100%;
+    font-size: 20px;
+
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.editorContent {
+    margin-top: 20px;
+}
+
+/* 버튼위치 */
+.getBtn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}

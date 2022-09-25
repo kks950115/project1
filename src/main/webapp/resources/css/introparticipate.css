@@ -1,0 +1,331 @@
+
+#container #content .contentIn #topmenu{
+    margin-top: 43px;
+    /* margin-bottom: 50px; */
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+#container #content .contentIn #topmenu p{
+    font-size: 40px;
+    font-weight: bold;
+    display: inline;
+    margin-top: 20px;
+    font-family: 'Noto-sans KR';
+}
+
+#container #content .contentIn #topmenu span{
+    font-size: 45px;
+    font-weight: bold;
+    color: #095bba;
+    font-family: 'Noto-sans KR';
+    margin-left: 34px;
+  
+}
+
+#container #content .contentIn .Box{
+    /* border: 1px solid black; */
+    width: 1196px;
+    
+}
+
+#container #content .contentIn .Box .boxMenu p{
+    font-size: 37px;
+    font-weight: 700;
+    font-family: 'Noto-sans KR';
+    padding-left: 48px;
+    padding-top: 10px;
+    color: #095bba;
+}
+
+#container #content .contentIn .participateBox1{
+    border: 1px solid #eee;
+    width: 1196px;
+    height: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-image: url(/resources/img/kintexbg1.jpg);
+    background-repeat: no-repeat;
+}
+
+#container #content .contentIn .participateBox1 .participateArea{
+    width: 990px;
+    height: 119px;
+    margin-top: 10px;
+    margin-left: 100px;
+    background-color: white;
+}
+
+#container #content .contentIn .participateBox1 .participateArea .participateAreaBox{
+    position: relative;
+    left: 121px;
+    top: -96px;
+}
+
+#container #content .contentIn .participateBox1 #participateArea1 span{
+    font-size: 25px;
+    font-weight: 700;
+    color:#095bba;
+    margin-left: 30px;
+    margin-top: 4px;
+}
+
+#container #content .contentIn .participateBox1 #participateArea2 span{
+    font-size: 25px;
+    font-weight: 700;
+    color: green;
+    margin-left: 30px;
+    margin-top: 4px;
+}
+
+#container #content .contentIn .participateBox1 #participateArea3 span{
+    font-size: 25px;
+    font-weight: 700;
+    color: orange;
+    margin-left: 30px;
+    margin-top: 4px;
+}
+
+#container #content .contentIn .participateBox1 #participateArea4 span{
+    font-size: 25px;
+    font-weight: 700;
+    color: orangered;
+    margin-left: 30px;
+    margin-top: 4px;
+}
+
+
+#container #content .contentIn .participateBox1 .participateArea .participateAreaBox p{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+#container #content .contentIn .participateBox2{
+  
+    height: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#container #content .contentIn .participateBox2 .participateCourse {
+    /* border: 1px red solid; */
+    width: 1000px;
+    height: 180px;
+    margin-top: 26px;
+    margin-left: 100px;
+}
+
+#container #content .contentIn .participateBox2 .participateCourse .participateCourseWrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between
+    
+
+}
+
+#container #content .contentIn .participateBox2 .participateCourse .participateCourseWrap li .courseBox{
+    width: 167px;
+    height: 177px;
+    border: 1px solid white;
+    background-image: url(/resources/img/participate_course.jpg);
+    background-repeat: no-repeat;
+}
+
+.contentBox {
+    margin-left: 38px;
+    margin-top: 58px;
+}
+.contentBox span {
+        font-weight:bolder ;
+        font-size: 20px;
+}
+.contentBox p {
+    font-weight: bolder;
+    font-size: 16px;
+    margin-left: -5px;
+    margin-top: -3px;
+    color: #095bba;
+
+}
+
+#container #content .contentIn .participateBox3{
+    /* border: 1px solid green; */
+    width: 1196px;
+    height: 350px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#container #content .contentIn .participateBox3 .tableBox{
+    border: 1px solid #eee;
+    width: 1000px;
+    margin-left: 100px;
+    height: 183px;
+    margin-top: 13px;
+}
+
+ .tableBottom{
+    margin-left: 100px;
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+#container #content .contentIn .participateBox3 .tableBox #participateBox3_table{
+    width: 1000px;
+    height: 184px;
+    border: 1px solid #eee;
+    font-family: 'Noto sans KR';
+}
+
+#container #content .contentIn .participateBox3 .tableBox #participateBox3_table thead{
+text-align: center;
+font-size: 18px;
+background-color: #eee;
+font-weight: 500;
+}
+
+#container #content .contentIn .participateBox3 .tableBox #participateBox3_table td{
+    border: 1px solid #eee;
+    text-align: center;
+    font-size: 15px;
+}
+#container #content .contentIn .participateBox3 .tableBox #participateBox3_table td p{
+    text-align: center;
+}
+
+#container #content .contentIn .participateBox3 .tableBox #participateBox3_table .colorP1{
+    color: red;
+    text-align: center;
+    font-weight: 500;
+}
+
+#container #content .contentIn .participateBox3 .tableBox #participateBox3_table .colorP2{
+    color: blue;
+    text-align: center;
+    font-weight: 500;
+}
+
+#container #content .contentIn .participateBox4{
+    /* border: 1px solid green; */
+    width: 1196px;
+    height: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#container #content .contentIn .participateBox4 .tableBox2{
+    width: 1000px;
+    height: 380px;
+    margin-left: 100px;
+    border: 1px red #eee;
+    margin-top: 20px;
+}
+
+#participateBox4_table{
+    border: 1px black solid;
+    width: 1000px;
+    height: 381px;
+    border: 1px solid #eee;
+    font-family: 'Noto sans KR';
+}
+
+#participateBox4_table th{
+    border: 1px solid #eee;
+    font-size: 17px;
+    background-color: #eee;
+}
+#participateBox4_table td{
+    border: 1px solid #eee;
+    font-size: 13px;
+    text-align: center;
+}
+
+#participateBox4_table td p{
+    font-size: 13px;
+    text-align: center;
+}
+#container #content .contentIn .participateBox5{
+    /* border: 1px solid green; */
+    width: 1196px;
+    height: 330px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#container #content .contentIn .participateBox5 .participateBox5_inner{
+    border: 3px solid #095bba;
+    width: 1000px;
+    height: 100px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+#innerHead {
+    width: 179px;
+    height: 104px;
+    border: -1px solid #095bba;
+    background-color: #095bba;
+    display: inline-block;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+
+#innerHead p {
+	margin-top: 30px;
+    line-height: 44px;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: 'Noto sans KR';
+    color: white;
+    margin-left: 28px;
+}
+#innerBody{
+    position: relative;
+    left: 232px;
+    top: -83px;
+    font-size: 20px;
+    font-family: 'Noto sans KR';
+    font-weight: 500;
+}
+#innerBody div{
+    font-size: 25px;
+    width: 160px;
+    /* height: 78px; */
+    /* border: 1px solid; */
+    position: relative;
+    left: 607px;
+    bottom: 71px;
+    text-align: center;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #19a4e9c2;
+    border-radius: 100px;
+}
+
+#innerBody div:hover{
+    cursor: pointer;
+ 
+}
+
+
+#innerBody div a{
+    color: white;
+} 
+
+#inner2 #innerHead p {
+   margin-top: 7px;
+   line-height: 42px;
+   font-size: 25px;
+   font-weight: 500;
+   font-family: 'Noto sans KR';
+   color: white;
+   margin-left: 40px;
+}
+
+#inner2 #innerBody p:nth-child(2){
+    color: red;
+}

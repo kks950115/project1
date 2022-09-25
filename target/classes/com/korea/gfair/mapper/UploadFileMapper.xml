@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.korea.gfair.mapper.UploadFileMapper">
+	<!-- 나현아 Mapper -->
+    <insert id="insert" >
+        <selectKey keyProperty="fid" order="BEFORE" resultType="int">
+            
+            <![CDATA[ 
+            SELECT 
+                "ADMIN"."ISEQ$$_88385".nextval
+            FROM
+                dual
+            ]]>
+        </selectKey>
+        <![CDATA[ 
+            INSERT INTO
+                tbl_uploadfile(
+                  fid, frename, fpath, forname)
+            VALUES
+                (#{fid}, #{frename}, #{fpath}, #{forname})
+        ]]>
+    </insert>
+
+    <delete id="delete">
+        <![CDATA[ 
+            DELETE FROM 
+                tbl_uploadfile
+            WHERE
+                fid = #{fid}
+        ]]>
+    </delete>
+
+    <update id="modify">
+        <![CDATA[ 
+            UPDATE
+                tbl_uploadfile
+            SET
+                frename = #{frename}, 
+                fpath = #{fpath}, 
+                forname = #{forname}
+            WHERE 
+                fid = #{fid}
+        ]]>
+    </update>
+
+    <select id="fileByFid" resultType="com.korea.gfair.domain.UploadFileVO">
+        <![CDATA[ 
+            SELECT
+                *
+            FROM
+                tbl_uploadfile
+            WHERE    
+                fid = #{fid}
+        
+        ]]>
+    </select>
+
+    <select id="boardFile" resultType="com.korea.gfair.domain.BoardSearchFileVO">
+        <![CDATA[ 
+            SELECT
+                b.bno,
+                b.reproot,
+                b.repstep,
+                b.repindent,
+                b.title,
+                b.content,
+                b.memberid,
+                b.insert_ts,
+                b.update_ts,
+                b.readcnt,
+                b.bname,
+                b.public_tf,
+                b.fid,
+                u.forname,
+                u.fpath,
+                u.frename
+            FROM
+                tbl_board b
+            LEFT OUTER JOIN
+                tbl_uploadfile u
+            ON
+                b.fid = u.fid
+            WHERE
+                bno = #{bno}
+        ]]>
+    </select>
+	
+
+	<!-- 이진성 Mapper -->
+	<insert id="insertFile">
+		<![CDATA[
+			INSERT INTO tbl_uploadfile(fid, frename, fpath, forname)
+			VALUES("ADMIN"."ISEQ$$_88295".nextval, #{frename}, #{fpath}, #{forname})
+		]]>
+	</insert>
+	
+	<update id="updateFileId">
+		<![CDATA[
+			UPDATE tbl_board 
+			SET fid = "ADMIN"."ISEQ$$_88295".currval
+			WHERE bno = (SELECT last_number FROM USER_SEQUENCES WHERE SEQUENCE_NAME = 'ISEQ$$_88385')-2
+		]]>
+	</update>
+	
+	
+	<select id="selectFileById" resultType="com.korea.gfair.domain.AttachFileVO">
+		<![CDATA[
+			SELECT *
+			FROM tbl_uploadfile
+			WHERE fid = #{fid}
+		]]>
+	</select>
+	
+	<update id="updateFile">
+		<![CDATA[
+			UPDATE tbl_uploadfile
+			SET frename = #{frename}, fpath = #{fpath}, forname = #{forname}
+			WHERE fid = #{fid}
+		]]>
+	</update>
+	
+	<update id="updateExistFileFromBoard">
+		<![CDATA[
+			UPDATE tbl_board
+			SET fid = null
+			WHERE bno = #{bno}
+		]]>
+	</update>
+	
+	<delete id="deleteExistFile">
+		<![CDATA[
+			DELETE FROM tbl_uploadfile
+			WHERE fid = #{fid}
+		]]>
+	</delete>
+	
+</mapper>

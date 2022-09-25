@@ -1,0 +1,197 @@
+
+#wrapper{
+    width: 1200px;
+    /* height: 800px; */
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+}
+
+div p{
+    padding: 20px 0px 10px 0px;
+}
+
+button{
+    cursor: pointer;
+    border: solid 1px #005bbb;
+    background-color: #005bbb;
+    color: white;
+
+    width: 100px;
+    height: 40px;
+    margin-bottom: 1px;
+}
+
+#deleteBtn{
+    margin-top: 20px;
+}
+input{
+    
+    width: 30px;
+    height: 20px;
+
+    margin-bottom: 4px;
+    margin-top: 7px;
+
+    display: inline-block;
+
+    border: none;
+    border-bottom: 1px solid grey;
+
+    align-self: stretch;
+}
+
+
+#searchBox{
+    width: 1200px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+table{
+    width: 100%;
+    border: 1px solid #005bbb;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+
+table, th, td {
+    border: 1px solid rgb(201, 201, 201);
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgb(245, 245, 245);
+    height: 50px;
+    font-size: 20px;
+    border-top: 3px solid #005bbb;
+    
+}
+
+td {
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+tr:hover {
+    background-color: rgba(187, 187, 187, 0.1);
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* 선택 */
+td:nth-child(1){
+    width: 70px;
+}
+/* 게시판 */
+td:nth-child(2) {
+    width: 100px;
+    text-align: center; 
+}
+
+#recontent{
+    width: 250px;
+    height: 39px;
+    margin: 0 5px 0 0;
+    border: 1px solid #333;
+}
+
+#pagination{
+    width: 1200px;
+    height: 50px;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+#pagination ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+#pagination ul li{
+    display: inline-block;
+
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    line-height: 30px;
+    
+    background-color: white;
+
+    text-align: center;
+    font-size: 16px;
+
+
+}
+
+#pagination ul li:visited, li:hover{
+   cursor: pointer;
+}
+#pagination ul li a{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+.currPage{
+    border: 1px solid black;
+}
+
+.start{
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    border:1px solid #eee;
+
+}
+
+.prev{
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    background-position:-30px;
+    border:1px solid #eee;
+}
+
+.next{		
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    background-position:-60px;
+    border:1px solid #eee;
+
+}
+
+.end{
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    background-position:-90px;
+    border:1px solid #eee;
+
+}
+
+select{
+    width: 95px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}

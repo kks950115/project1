@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.korea.gfair.mapper.BoardReplyMapper">
+    <select id="replyList" resultType="com.korea.gfair.domain.ReplyVO">
+        <![CDATA[ 
+            SELECT
+                /*+ INDEX(tbl_reply)*/
+                *
+            FROM
+                tbl_reply
+            WHERE
+                bno = #{bno}
+            OFFSET 
+                (#{cri.currPage} - 1 ) * #{cri.amount} ROWS
+            FETCH NEXT 
+                #{cri.amount} ROWS ONLY
+        ]]>
+    </select>
+
+    <select id="replySelect" resultType="com.korea.gfair.domain.ReplyVO">
+        <![CDATA[ 
+            SELECT
+                /*+ INDEX(tbl_reply)*/
+                *
+            FROM
+                tbl_reply
+            WHERE
+                reno = #{reno}
+        ]]>
+    </select>
+
+    <insert id="replyInsert">
+        <![CDATA[ 
+            INSERT INTO tbl_reply 
+                (bno, 
+                recontent, 
+                memberid)
+            VALUES (
+                #{bno}, 
+                #{recontent}, 
+                #{memberid})
+        ]]>
+    </insert>
+
+    <delete id="replyDelete">
+        <![CDATA[ 
+            DELETE FROM 
+                tbl_reply
+            WHERE 
+                reno = #{reno}
+        ]]>
+    </delete>
+
+    <update id="replyUpdate">
+        <![CDATA[ 
+            UPDATE
+                tbl_reply
+            SET 
+                recontent = #{reply.recontent},
+                redate = sysdate
+            WHERE
+                reno = #{reply.reno}
+        ]]>
+    </update>
+    
+    <select id="totalCount" resultType="int">
+        <![CDATA[ 
+            SELECT
+                count(bno)
+            FROM
+                tbl_reply
+            WHERE
+                bno = #{bno}
+        ]]>
+    </select>
+
+    <select id="boardReplyCnt" resultType="com.korea.gfair.domain.BoardReplyCountVO">
+        <![CDATA[ 
+            SELECT
+                b.bno,
+                b.reproot,
+                b.repstep,
+                b.repindent,
+                b.title,
+                b.content,
+                b.memberid,
+                b.insert_ts,
+                b.update_ts,
+                b.readcnt,
+                b.bname,
+                b.fid,
+                b.public_tf,
+                count(r.reno) AS renoCount
+            FROM
+                tbl_board b
+            LEFT OUTER JOIN
+                tbl_reply r
+            ON
+                b.bno = r.bno
+            WHERE
+                bname = #{bname}
+        ]]>
+        <choose>
+            <when test="cri.type eq 'T'.toString()">
+                AND b.title LIKE '%'||#{cri.keyword}||'%'
+            </when>
+            <when test="cri.type eq 'C'.toString()">
+                AND b.content LIKE '%'||#{cri.keyword}||'%'
+            </when>
+            <when test="cri.type eq 'W'.toString()">
+                AND b.memberid LIKE '%'||#{cri.keyword}||'%'
+            </when>
+            <when test="cri.type eq 'TC'.toString()">
+                AND (b.content LIKE '%'||#{cri.keyword}||'%'
+                     OR b.title LIKE '%'||#{cri.keyword}||'%')
+            </when>
+        </choose>
+            
+    <![CDATA[ 
+        GROUP BY
+            (b.bno,
+            b.reproot,
+            b.repstep,
+            b.repindent,
+            b.title,
+            b.content,
+            b.memberid,
+            b.insert_ts,
+            b.update_ts,
+            b.readcnt,
+            b.bname,
+            b.fid,
+            b.public_tf)
+        ORDER BY repRoot desc, repStep asc
+        OFFSET
+            (#{cri.currPage} - 1)*#{cri.amount} ROWS
+        FETCH NEXT #{cri.amount} ROWS ONLY    
+        
+    ]]>
+    </select>
+</mapper>

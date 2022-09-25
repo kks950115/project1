@@ -1,0 +1,250 @@
+@charset "UTF-8";
+
+
+/* --------------------list------------------------ */
+button {
+    margin: 0;
+}
+button:hover {
+   cursor: pointer;
+}
+
+#totalCount {
+    padding: 20px 0px 10px 0px;
+}
+
+
+/* 전시일정 게시판 */
+table {
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid rgb(201, 201, 201);
+    border-collapse: collapse;
+}
+.exHeadLine {
+    border-top: 3px solid #005bbb;
+}
+th {
+    background-color: rgb(245, 245, 245);
+    height: 50px;
+    font-size: 20px;
+    
+}
+
+td {
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+}
+td:nth-child(2) {
+    color: #005bbb;
+}
+
+tr:hover {
+    background-color: rgba(187, 187, 187, 0.1);
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+/* 체크박스 */
+td:nth-child(1) {
+    width: 30px;
+}
+/* no*/
+td:nth-child(2){
+    width: 70px;
+}
+
+/* 제목 */
+td:nth-child(3) {
+    text-align: justify;
+    text-align: left; 
+    padding-left: 10px;
+    width: auto;
+
+}
+.ptitle {
+    width: 99%;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 시작일,마감일,등록일 */
+td:nth-child(4),td:nth-child(5),td:nth-child(6) {
+    width: 130px;
+}
+/* 조회수  */
+td:nth-child(7)  {
+    width: 100px;
+}
+
+
+#searchMenu {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.searchcss {
+    height: 35px;
+}
+
+
+/* ---------------------페이징-------------------------- */
+
+/* paging */
+#pagination {
+    width: 95%;
+    margin: 0 auto;
+}
+
+#pagination ul {
+    display: flex;
+    justify-content: center;
+
+}
+#pagination li {
+    width: 30px;
+    height: 30px;
+    display: flex;
+
+    font-size: 16px;
+    margin-right: 10px;
+
+    text-align: center;
+    line-height: 30px;
+    flex-direction: column
+}
+
+
+/* 하단 버튼 */
+.btn {
+    margin: 20px 0px 10px 0px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border: 0px;
+    width: 100%;
+}
+
+/* 페이징 버튼 */
+
+.start{
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    border:1px solid #eee;
+
+}
+
+.prev{
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    background-position:-30px;
+    border:1px solid #eee;
+}
+
+.next{		
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    background-position:-60px;
+    border:1px solid #eee;
+
+}
+
+.end{
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    background-position:-90px;
+    border:1px solid #eee;
+
+}
+
+/* 현재페이지 버튼 */
+.currPage {
+    height: 30px!important;
+    color: white;
+    border: 1px solid #000;
+}
+
+/* 버튼CSS */
+.buttonstyle {
+    height: 40px;
+    width: 100px;
+    
+    /* line-height: 40px; */
+    text-align: center;
+    border: 0px;
+    
+    background-color: #005bbb;
+    color: #fff;
+    font-size: 15px;
+    
+}
+
+/* --------------------get------------------------ */
+#getPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    margin-top: 50px;
+
+    font-weight: bold;
+
+}
+/* 내용block */
+.subjectLine {
+
+    width: 100%;
+    border-top: 3px solid #005bbb;
+}
+
+/* 제목,작성자 */
+.subject {
+    display: flex;
+    justify-content: space-between;
+
+    height: 40px;
+    
+    line-height: 40px;
+    font-size: 20px;
+}
+/* 등록일,수정일,조회수 */
+.regDate {
+    height: 40px;
+
+    line-height: 40px;
+    font-size: 15px;
+
+    background-color: #eee;
+}
+
+/* 내용 */
+.content {
+    display: flex;
+    align-items: center;
+
+    margin-top: 10px;
+    padding: 30px 0px 30px 10px;
+
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+
+    
+    width: 100%;
+}

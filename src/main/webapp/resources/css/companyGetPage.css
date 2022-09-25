@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+
+button:hover {
+   cursor: pointer;
+}
+
+.buttonstyle {
+    height: 40px;
+    width: 100px;
+    
+    margin-top: 20px;
+    text-align: center;
+
+    border: 0px;
+    
+    background-color: #005bbb;
+    color: #fff;
+    font-size: 15px;
+    
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------------------글구성-------------------------- */
+.companyImg {
+    margin: 20px;
+
+    height: 300px;
+    width: 300px;
+
+    border: 1px solid rgb(201, 201, 201);
+}
+/* 하단 버튼 */
+.reg {
+    margin: 0;
+
+    display: flex;
+    justify-content: flex-end;
+
+    width: 100%;
+}
+
+#getPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    margin-top: 50px;
+}
+/* 내용block */
+.subjectLine {
+
+    width: 100%;
+    border-top: 3px solid #005bbb;
+}
+
+/* 제목,작성자 */
+.subject {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 40px;
+    
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+/* 등록일,수정일,조회수 */
+.regDate {
+    
+    height: 40px;
+
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+
+    background-color: #eee;
+}
+
+/* 내용 */
+.content {
+    display: flex;
+    justify-content: space-around;
+
+    min-height: 300px;
+
+    margin-top: 10px;
+    padding: 100px 0px;
+
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+
+    
+    width: 100%;
+}
+.companyTable {
+    width: 70%;
+    font-size: 20px;
+}
+table, th, td {
+    border-top: 1px solid rgb(201, 201, 201);
+    border-bottom: 1px solid rgb(201, 201, 201);
+    border-collapse: collapse;
+}
+th {
+    width: 40%;
+}
+tr:nth-child(1) {
+    border-top: 2px solid #005bbb;
+}
+tr:last-child {
+    border-bottom: 2px solid #005bbb;
+}

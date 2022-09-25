@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+p {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+button:hover {
+   cursor: pointer;
+}
+
+
+/* checkPass */
+.topBottom {
+    height: 200px;
+}
+
+.checkPass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    border: 3px solid rgb(187, 187, 187, 0.3);
+    border-radius: 10px;
+}
+
+.passSize {
+    height: 40px;
+    width: 300px;
+
+    font-size: 20px;
+    border: 1px solid gray;
+}
+
+.checkBtn {
+    margin-top: 20px;
+
+    height: 50px;
+    width: 300px;
+    
+    border: 0px;
+    text-align: center;
+
+    background-color: #005bbb;
+    color: #fff;
+    font-size: 20px;
+    
+}
+
+/* ----------------------------------------------- */
+#infoPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    border: 3px solid rgb(187, 187, 187, 0.3);
+    border-radius: 10px;
+}
+
+/* 맨위 타이틀 */
+.bnameSize {
+    margin: 20px 0px 10px 0px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.memberInfo {
+    border-top: 3px solid #005bbb;
+    width: 100%;
+
+}
+.buttonstyle {
+    height: 50px;
+    width: 250px;
+
+    margin-top: 40px;
+    margin-right: 10px;
+    
+    border: 0px;
+    text-align: center;
+
+    background-color: #005bbb;
+    color: #fff;
+    font-size: 20px;
+}
+/* ----------------------------------------------- */
+input {
+    height: 40px;
+    font-size: 20px;
+}
+
+.contentLine {
+    padding: 0px 0px 10px 10px;
+    border-bottom: 2px solid rgb(187, 187, 187, 0.3);
+}
+.contentLine > div {
+    font-size: 20px;
+}
+.inlineDiv {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 40%;
+    align-items: flex-end;
+}
+#mail_check_input_box_false {
+    background-color: #ebebe4;
+}
+
+#mail_check_input_box_true {
+    background-color: white;
+}
+
+.mail_check_wrap {
+    width: 95%;
+
+    display: flex;
+    justify-content: flex-start;
+}
+.correct{
+    padding: 10px 0px;
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.incorrect{
+    padding: 10px 0px;
+    color: red;
+    font-size: 20px;
+}
+/* 시간알림구역 */
+.time {
+    padding: 0px 45px;
+    font-weight: bold;
+    line-height: 45px;
+    color: green;
+}
+.mail_input_box {
+    display: inline-flex;
+}
+
+/* 메일수정하기 */
+.mail_check_button {
+    cursor: pointer;
+
+    width: 200px;
+    height: 45px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    color: #fff;
+
+    border: 1px solid #005bbb;
+    background-color: #005bbb;
+
+}
+/* 인증번호 전송버튼 */
+.mailbuttonStyle {
+    cursor: pointer;
+
+    width: 200px;
+    height: 45px;
+
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    
+    border: 0px;
+
+    background-color: #005bbb;
+
+}
+/* 이메일 인증번호 / 수정취소버튼 */
+.cancleBtnStyle, .mail_check_Message {
+    cursor: pointer;
+    margin-right: 5px;
+
+    width: 225px;
+    height: 45px;
+
+    color: #fff;
+    font-size: 20px;
+    
+    border: 0px;
+    background-color: #005bbb;
+}
+
+/* 변경이메일 기입창 */
+#email {
+    width: 450px;
+    border: 1px solid gray;
+}
+/* 인증코드 기입창 */
+.mail_check_input {
+    width: 250px;
+    height: 95%;
+    border: 1px solid gray;
+}
+input#roadFullAddr, .roadFull {
+    width: 400px;
+}
+
+#pemail, #pphone, #pcbno {
+    color: red;
+}
+
+/* 파일첨부버튼 커스터마이징 */
+#cbnoFile {
+    display: none;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    border: 1px solid #005bbb;
+    padding: 6px 12px;
+    cursor: pointer;
+
+    font-size: 20px;
+    color: #005bbb;
+    font-weight: bold;
+}

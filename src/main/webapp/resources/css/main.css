@@ -1,0 +1,145 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* base */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#quick_Menu_Wrap{
+  background-image: url(/resources/img/pattern.png);
+}
+
+#quick_Menu_Wrap #quick_Menu{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+#quick_Menu_Wrap #quick_Menu ul{
+  display: inline-block;
+  width: 100%;
+  margin: 50px 0;
+}
+
+#quick_Menu_Wrap #quick_Menu li.quick{
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin-left: 30px;
+  float: left;
+  font-size: 18px;
+}
+
+
+
+#quick_Menu_Wrap #quick_Menu li.quick a{
+  display: block;
+  color: #fff;
+  height: 100%;
+}
+
+
+#notice_Wrap{
+  width: 100%;
+}
+
+#notice_Wrap #notice_Board{
+  width: 600px;
+  margin: 0 auto;
+}
+
+#notice_Wrap #notice_Board > h2{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#notice_Wrap #notice_Board ul{
+  width: 100%;
+  
+  margin: 20px 0 20px 0;
+}
+
+#notice_Wrap #notice_Board ul li{
+  width: 600px;
+  font-size: 26px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 5px;
+
+}
+
+#member_Join_Wrap{
+  width: 100%;
+  height: 300px;
+  
+  background-image: url("/resources/img/join_background.png");
+  margin-bottom: 20px;
+}
+
+#member_Join_Wrap #member_Join{
+  width: 600px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+#member_Join_Wrap #member_Join > h3{
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+#member_Join_Wrap #member_Join > div{
+  width: 150px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+#member_Join_Wrap #member_Join .member_Join_btn{
+  width:150px;
+  background-color: #005bbb;
+  color: #fff;
+  height: 20px;
+  text-align: center;
+  padding: 15px 0;
+  display: inline-block;
+  margin: 4px;
+  cursor: pointer;
+
+}
+
+.partner{width:100%; clear:both;  padding:10px 0; overflow:hidden; margin: 0 auto;}
+.partner .partnerBox{ position:relative; left:0; top:0; width:3800px; overflow:hidden;} 
+.partner ul{overflow:hidden; float:left;}
+.partner li{margin-right:0; float:left; width:172px; height:88px;}

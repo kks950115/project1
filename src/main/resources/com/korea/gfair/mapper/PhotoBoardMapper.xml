@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.korea.gfair.mapper.PhotoBoardMapper">
+
+
+    <insert id="insert">
+        <![CDATA[ 
+            INSERT INTO 
+                tbl_uploadfile (frename, fpath, forname)
+            VALUES 
+                (#{uploadFile.frename}, #{uploadFile.fpath}, #{uploadFile.forname})
+        ]]>
+    </insert>
+
+
+    <insert id="insertSelectKey">
+        <selectKey keyProperty="fid" order="BEFORE" resultType="int">
+            <!-- 새로운 PK의 값을 생성하는 SQL 구문 -->
+            <![CDATA[ 
+                SELECT "ADMIN"."ISEQ$$_88295".nextval FROM dual
+            ]]> 
+        </selectKey>
+        <![CDATA[ 
+            INSERT INTO 
+                tbl_uploadfile (fid, frename, fpath, forname)
+            VALUES 
+            (#{fid}, #{frename}, #{fpath}, #{forname})
+        ]]>
+    </insert>
+
+
+    <!-- <select id="getList" resultType="org.zerock.myapp.domain.PhotoVO">
+        <![CDATA[ 
+            SELECT 
+                /*+ index_desc(tbl_uploadfile) */ *
+            FROM
+                tbl_uploadfile A LEFT OUTER JOIN tbl_board B
+            ON
+                A.fid = B.fid
+        ]]>
+    </select> -->
+
+
+    <select 
+        id="getListWithPaging" 
+        resultType="com.korea.gfair.domain.PhotoVO2">
+        <![CDATA[ 
+            SELECT
+                /*+ index_desc(tbl_board) */ 
+                B.title,
+                A.fid,
+                A.frename,
+                A.fpath,
+                A.forname
+            FROM
+                tbl_uploadfile A LEFT OUTER JOIN tbl_board B
+            ON
+                A.fid = B.fid
+            WHERE
+                B.bname = '포토게시판'
+            ORDER BY
+            	bno desc  
+              
+        ]]>
+            
+            <choose>
+                <when test="type == 'T'.toString()">
+                    AND title LIKE '%'||#{keyword}||'%'
+                </when>
+
+                <when test="type == 'C'.toString()">
+                    AND content LIKE '%'||#{keyword}||'%'
+                </when>
+
+                <when test="type eq 'W'.toString()">
+                    AND memberid LIKE '%'||#{keyword}||'%'
+                </when>
+            </choose>
+            <![CDATA[ 
+                OFFSET (#{currPage} - 1) * #{amount} ROWS
+                FETCH NEXT #{amount} ROWS ONLY
+            ]]>
+    </select>
+
+    <select id="read" resultType="com.korea.gfair.domain.PhotoVO">
+        <![CDATA[ 
+            SELECT 
+                *
+            FROM
+            	tbl_uploadfile
+            WHERE
+                fid = #{fid}
+        ]]>
+    </select>
+
+
+    <update id="update">
+        <![CDATA[ 
+            UPDATE 
+                tbl_uploadfile
+            SET
+                forname = #{updateFile.frename},
+                fpath = #{updateFile.fpath},
+                frename = #{updateFile.frename}
+            WHERE
+                fid = #{updateFile.fid}
+        ]]>
+    </update>
+
+
+    <delete id="delete">
+        <![CDATA[ 
+            DELETE FROM
+                tbl_uploadfile
+            WHERE
+                fid = #{fid}
+        ]]>
+    </delete>
+
+
+    <select id="getTotalCount" resultType="int">
+        <![CDATA[ 
+        SELECT 
+            count(A.fid)
+        FROM
+            tbl_uploadfile A LEFT OUTER JOIN tbl_board B
+        ON
+            A.fid = B.fid
+        WHERE
+            B.bname = '포토게시판'
+        ]]>
+
+        <choose>
+            <when test="type == 'T'.toString()">
+                AND title LIKE '%'||#{keyword}||'%'
+            </when>
+
+            <when test="type == 'C'.toString()">
+                AND content LIKE '%'||#{keyword}||'%'
+            </when>
+
+            <when test="type eq 'W'.toString()">
+                AND memberid LIKE '%'||#{keyword}||'%'
+            </when>
+        </choose>
+    </select>
+
+</mapper>

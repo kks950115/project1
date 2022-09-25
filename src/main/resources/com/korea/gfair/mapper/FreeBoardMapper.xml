@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.korea.gfair.mapper.FreeBoardMapper">
+
+  <select id="selectList" resultType="com.korea.gfair.domain.BoardVO">
+    	SELECT /*+ index_desc(tbl_board) */ *
+    	 FROM tbl_board WHERE bno > 0
+  </select>
+
+  <select id="getListWithPaging" resultType="com.korea.gfair.domain.BoardVO">
+    SELECT /*+ index_desc(tbl_board) */ *
+    FROM tbl_board
+  	WHERE bname = #{bname}
+        <choose>
+            <when test="cri.type == 'T'.toString()">
+                and title LIKE '%'||#{cri.keyword}||'%'
+            </when>
+
+            <when test="cri.type == 'C'.toString()">
+                and content LIKE '%'||#{cri.keyword}||'%'
+            </when>
+
+            <when test="cri.type == 'W'.toString()">
+                and memberid LIKE '%'||#{cri.keyword}||'%'
+            </when>
+        </choose>
+
+    ORDER BY bno desc
+    OFFSET ( #{cri.currPage} - 1) * #{cri.amount} ROWS
+    FETCH NEXT #{cri.amount} ROWS ONLY
+
+  </select>
+
+  <select id="select" resultType="com.korea.gfair.domain.BoardVO">
+    SELECT *
+    FROM tbl_board
+    WHERE bno = #{bno}
+  </select>
+
+  
+
+  <update id="readcnt">
+    UPDATE
+    	tbl_board
+    SET 
+    	readcnt= readcnt+1
+    WHERE
+    	bno = #{bno}
+  </update>
+  
+  
+  <insert id="insert">
+    <selectKey keyProperty="bno" order="BEFORE" resultType="int">
+      select "ADMIN"."ISEQ$$_88385".nextval FROM dual
+    </selectKey>
+
+    INSERT INTO tbl_board(
+      bno,repRoot,title,content,memberid,bname
+    )
+    VALUES(#{bno},#{bno},#{title},#{content},#{memberid},#{bname}
+
+    )
+  </insert>
+
+  <update id="update">
+    UPDATE 
+    	tbl_board
+    SET 
+	    title = #{title},
+	    content = #{content},
+	    update_ts = sysdate
+	WHERE
+		bno= #{bno}
+    
+  </update>
+
+  <delete id="delete">
+    DELETE 
+    FROM tbl_board
+    WHERE bno = #{bno}
+
+  </delete>
+
+  <select id="getTotalCount" resultType="int">
+	  <![CDATA[ 
+	      SELECT
+	      /*+ INDEX_DESC(tbl_board)*/
+	          count(bno)
+	      FROM
+	          tbl_board
+	      WHERE
+	          bname = #{bname}
+	  ]]>
+	  <choose>
+	      <when test="cri.type eq 'T'.toString()">
+	          AND title LIKE '%'||#{cri.keyword}||'%'
+	      </when>
+	      <when test="cri.type eq 'C'.toString()">
+	          AND content LIKE '%'||#{cri.keyword}||'%'
+	      </when>
+	      <when test="cri.type eq 'W'.toString()">
+	          AND memberid LIKE '%'||#{cri.keyword}||'%'
+	      </when>
+	  </choose>
+  </select>
+  
+  
+</mapper>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.korea.gfair.mapper.EventBoardMapper">
+
+    <insert id="insert">
+        <![CDATA[ 
+            INSERT INTO 
+                tbl_board (
+                    
+                )
+            VALUES 
+                (
+                    
+                )
+        ]]>
+    </insert>
+
+    
+    <insert id="insertSelectKey">
+        <selectKey keyProperty="bno" order="BEFORE" resultType="int">
+            <!-- 새로운 PK의 값을 생성하는 SQL 구문 -->
+            <![CDATA[ 
+                SELECT "ADMIN"."ISEQ$$_88385".nextval FROM dual
+            ]]> 
+        </selectKey>
+        <![CDATA[ 
+            INSERT INTO 
+                tbl_board(
+                    bno,
+                    reproot, 
+                    title,
+                    content, 
+                    memberid,
+                    bname,
+                    fid
+                )
+            VALUES 
+                (
+                    #{bno}, 
+                    #{bno}, 
+                    #{dto.title}, 
+                    #{dto.content},
+                    #{dto.memberid},
+                    #{dto.bname},
+                    #{dto.fid,jdbcType=INTEGER}
+                )
+        
+        ]]>
+    </insert>
+
+    <select 
+        id="getList" 
+        resultType="com.korea.gfair.domain.EventVO">
+        
+        <![CDATA[ 
+            SELECT
+                /*+ index_desc(tbl_board) */ *
+            FROM
+                tbl_board
+            WHERE
+                bname = '이벤트게시판'
+        ]]>
+    </select>
+
+    <update id="readcnt">
+        <![CDATA[ 
+            UPDATE 
+                tbl_board
+            SET 
+                readcnt = readcnt + 1 
+            WHERE bno=#{bno}
+        ]]>
+    </update>
+
+	<update id="readcntWithFid">
+        <![CDATA[ 
+            UPDATE 
+                tbl_board
+            SET 
+                readcnt = readcnt + 1 WHERE fid=#{fid}
+        ]]>
+    </update>
+    <select 
+        id="getListWithPaging"
+        resultType="com.korea.gfair.domain.EventVO">
+                
+        <![CDATA[ 
+            SELECT
+                /*+ index_desc(tbl_board) */ *
+            FROM
+                tbl_board
+            WHERE
+                bname = '이벤트게시판'
+            ORDER BY
+            	bno desc
+        ]]>
+            <choose>
+                <when test="type == 'T'.toString()">
+                    AND title LIKE '%'||#{keyword}||'%'
+                </when>
+
+                <when test="type == 'C'.toString()">
+                    AND content LIKE '%'||#{keyword}||'%'
+                </when>
+
+                <when test="type eq 'W'.toString()">
+                    AND memberid LIKE '%'||#{keyword}||'%'
+                </when>
+            </choose>
+        <![CDATA[ 
+            OFFSET (#{currPage} - 1) * #{amount} ROWS
+            FETCH NEXT #{amount} ROWS ONLY
+        ]]>
+    </select>
+
+    
+    <select 
+        id="read"
+        resultType="com.korea.gfair.domain.EventVO">
+        <![CDATA[ 
+            SELECT 
+                *
+            FROM 
+                tbl_board
+            WHERE 
+                bno = #{bno}
+        ]]>
+    </select>
+
+    <select 
+        id="getWithFid"
+        resultType="com.korea.gfair.domain.EventVO">
+        <![CDATA[ 
+            SELECT 
+                *
+            FROM 
+                tbl_board
+            WHERE 
+                fid = #{fid}
+        ]]>
+    </select>
+
+
+    <update id="update">
+        <![CDATA[ 
+            UPDATE 
+                tbl_board
+            SET
+                title = #{title},
+                content = #{content},
+                memberid = #{memberid},
+                bname = #{bname}
+            WHERE
+                bno = #{bno}
+        ]]>
+    </update>
+
+
+    <delete id="delete">
+        <![CDATA[ 
+            DELETE FROM 
+                tbl_board
+            WHERE 
+                bno = #{bno}
+        ]]>
+    </delete>
+
+    <delete id="deleteWithFid">
+        <![CDATA[ 
+            DELETE FROM 
+                tbl_board
+            WHERE 
+                fid = #{fid}
+        ]]>
+    </delete>
+
+    <select 
+        id="getTotalCount"
+        resultType="int">
+        <![CDATA[ 
+        SELECT 
+            count(bno)
+        FROM 
+            tbl_board
+        WHERE 
+            bname = '이벤트게시판'
+        ]]>
+
+        <choose>
+            <when test="type == 'T'.toString()">
+                AND title LIKE '%'||#{keyword}||'%'
+            </when>
+
+            <when test="type == 'C'.toString()">
+                AND content LIKE '%'||#{keyword}||'%'
+            </when>
+
+            <when test="type eq 'W'.toString()">
+                AND memberid LIKE '%'||#{keyword}||'%'
+            </when>
+        </choose>
+    </select>
+</mapper>

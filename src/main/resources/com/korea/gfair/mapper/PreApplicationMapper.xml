@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.korea.gfair.mapper.PreApplicationMapper">
+
+    <insert id="insert">
+        <![CDATA[ 
+            INSERT INTO
+                tbl_application(
+                    exno,
+                    appname,
+                    applyer,
+                    memberid,
+                    phone
+                )
+            VALUES
+                (
+                    #{dto.exno},
+                    #{dto.appname},
+                    #{dto.applyer},
+                    #{dto.memberid},
+                    #{dto.phone}
+                )
+        ]]>
+    </insert>
+    <!-- SELECT
+    /*+ index_desc(tbl_board) */ 
+    B.title,
+    A.fid,
+    A.frename,
+    A.fpath,
+    A.forname
+FROM
+    tbl_uploadfile A LEFT OUTER JOIN tbl_board B
+ON
+    A.fid = B.fid
+WHERE
+    B.bname = '포토게시판' -->
+    <select id="getList" resultType="com.korea.gfair.domain.PreApplicationVO2">
+        <![CDATA[ 
+            SELECT 
+                A.appno,
+                A.exno,
+                A.appname,
+                A.appdate,
+                A.applyer,
+                A.memberid,
+                A.phone,
+                B.exstart,
+                B.exend
+            FROM 
+                tbl_application A LEFT OUTER JOIN tbl_exhibition B
+            ON
+                A.exno = B.exno
+            WHERE
+                memberid = #{memberid}
+        ]]>
+    </select>
+
+</mapper>

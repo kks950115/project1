@@ -1,0 +1,108 @@
+@charset "UTF-8";	
+
+  #container #content .contentIn #topmenu{
+      margin-top: 43px;
+      /* margin-bottom: 50px; */
+      padding-bottom: 30px;
+      padding-top: 30px;
+  }
+
+  #container #content .contentIn #topmenu p{
+      font-size: 45px;
+      font-weight: bold;
+      display: inline;
+      margin-top: 20px;
+      font-family: 'Noto-sans KR';
+  }
+
+  #container #content .contentIn #topmenu span{
+      font-size: 35px;
+      font-weight: bold;
+      color: #095bba;
+      font-family: 'Noto-sans KR';
+      margin-left: 34px;
+    
+  }
+
+
+  #container #content .contentIn .historyBox{
+      
+      margin-bottom: 120px;
+      padding: 20px;
+      width: 1200px;
+  }
+  #container #content .contentIn .historyBox .history_font{
+      font-size: 22px;
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  #container #content .contentIn .historyBox .text_year{
+      color: #095bba;
+      font-weight: bold;
+      margin-right: 10px;
+
+  }
+
+  #container #content .contentIn .historyBox .text_date{
+      font-size: 19px;
+      color: rgba(95, 89, 89, 0.842);
+
+  }
+
+  #container #content .contentIn .historyBox .historyBtn{
+      border: 1px gray solid;
+      font-weight: bolder;
+      font-size: 26px;
+      text-align: center;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+  }
+  .historyBtn:hover{
+      background-color: #095bba;
+      color: white;
+  }
+
+
+  #container #content .contentIn .historyBox .historyList .historyboxLine1{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      margin-top: 40px;
+      margin-bottom: 35px;
+
+  }
+  #container #content .contentIn .historyBox .historyList .historyboxLine2 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      margin-top: 40px;
+      margin-left: 16px;
+  }
+  
+
+  #container #content .contentIn .historyBox  .history2020 div{
+  border: 1px solid #e4e6e8;
+
+  }
+  #container #content .contentIn .historyBox  .history2020 img{
+      width: 370px;
+      height: 380px;
+  }
+
+  #container #content .contentIn .historyBox  .history2019 img{
+      width: 370px;
+      height: 380px;
+  }
+
+  #container #content .contentIn .historyBox  .history2018 img{
+      width: 370px;
+      height: 380px;
+  }
+

@@ -1,0 +1,118 @@
+
+
+#wrapper{
+    width: 1200px;
+    
+    display: flex;
+    justify-content:center;
+
+    font-size: initial;
+}
+
+#dropForm{
+    width: 1100px;
+    height: 1000px;
+
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#wrapper input{
+    display: inline-block;
+    width: 548px;
+    height: 30px;
+
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+    border: none;
+    border-bottom: 1px solid grey;
+
+    align-self: stretch;
+}
+
+#inner_con h2{
+	font-size : 18px;
+    text-align: center;
+}
+
+.buttons button{
+    cursor: pointer;
+    border: solid 1px #005bbb;
+    background-color: #005bbb;
+    color: white;
+
+    width: 100px;
+    height: 40px;
+    margin-bottom: 1px;
+    margin-left: 5px;
+}
+
+.buttons{
+
+	display: flex;
+    justify-content:center;
+}
+
+div#info_agree{
+    width: 1100px;
+    height: 500px;
+
+    background-color: #fbfbfb;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div.info_user{
+    width: 900px;
+    height: 100px;
+
+    border: 1px solid #e1e1e1;
+    
+    text-align: center;
+    margin-left: 100px;
+}
+
+div.info_user em{
+    font-style: normal;
+    color: #005bbb;
+}
+
+#inner_con h2 strong{
+    color: #005bbb;
+}
+
+div#info_user_check{
+    display: flex;
+    justify-content: space-around;
+}
+input#agreement{
+    width: 30px;
+    margin: 0 15px;
+}
+
+div#info_user_check h3{
+    display: inline;
+    
+}
+
+div#formdata,div#formdata2{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+}
+
+div#emailbox{
+    width: 1100px;
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    border: 1px solid #e1e1e1;
+}

@@ -1,0 +1,315 @@
+@charset "UTF-8";
+     #container #content .contentIn #topmenu{
+            margin-top: 30px;
+            /* margin-bottom: 50px; */
+         padding-bottom: 30px;
+         padding-top: 30px;
+     }
+
+     #container #content .contentIn #topmenu p{
+         font-size: 40px;
+         font-weight: bold;
+         display: inline;
+         margin-top: 20px;
+         font-family: 'Noto-sans KR';
+     }
+
+     #container #content .contentIn #topmenu span{
+         font-size: 45px;
+         font-weight: bold;
+         color: #095bba;
+         font-family: 'Noto-sans KR';
+         margin-left: 34px;
+       
+     }
+
+     /* 상단 텝 메뉴 생성  */
+     .tap_all_wrap {
+     width: 1199px;
+     margin: 0 auto;
+     /* height : 1120px; */
+ }
+ .tap_all_wrap ul.tabs{
+     display: flex;
+     margin-top: 2px;
+     float: left;
+     height: 57px;
+     /* border: 1px solid #eee; */
+     width: 1192px;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: space-evenly;
+     padding-top: 2px;
+     cursor: pointer;
+ }
+ .tap_all_wrap ul.tabs li{
+     list-style: none;
+     float: left;
+     width: 140px;
+     height: 29px;
+     text-align: center;
+     border: 1px solid #eee;
+     border-left: none;
+     overflow: hidden;
+     border-color: #fafafa;
+     cursor: pointer;
+     line-height: 29px;
+     font-size: 24px;
+     padding-top: 11px;
+         
+     }
+
+ .tap_all_wrap ul.tabs li.active {
+     background-color: #fff;
+     border-bottom: 1px solid #fff;
+     font-weight: bold;
+     color: #095bba;
+     font-family: 'Noto-sans KR';
+     font-size: 25px;
+     
+ }
+ .tap_all_wrap .tab_wrap{
+     width: 1190px;
+     float: left;
+     /* height: 780px; */
+     background-color: #fff;
+     /* border: 1px solid rgb(29, 26, 26); */
+     border-top: none;
+     
+ }
+ .tap_all_wrap .tab_wrap .tab_content{
+     padding: 10px;
+     display: none;
+     /* height: 973px; */
+     font-size: 15px;
+ }
+
+ /* 탭 1 레스토랑 part  */
+
+ #restaurant_1 , #restaurant_2, #restaurant_3 ,  #restaurant_4 {
+ width: 1165px;
+ height: 740px;
+ border:  1px #eee solid;
+ margin-top: 40px;
+ font-family: 'Noto-sans KR';
+ }
+
+ #restaurant_1 h3{
+     font-size: 30px;
+     margin-left: 44px;
+     margin-top: 20px;
+     font-weight: bolder;
+ }
+
+
+ #restaurant_1 .restaurant1_ul {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: space-evenly;
+ margin-top: 20px;
+ }
+ #restaurant_1 .restaurant1_ul li img{
+ width : 510px;
+ }
+
+ .restaurant_table {
+ width: 1068px;
+ height: 220px;
+ margin-left: 48px;
+ margin-top: 40px;
+ font-size: 18px;
+ text-align: center;
+ }
+
+
+ .restaurant_table  td{
+     font-size: 18px;
+ }
+
+ /* 레스토랑 2 */
+ #restaurant_2 h3{
+     font-size: 30px;
+     margin-left: 44px;
+     margin-top: 20px;
+     font-weight: bolder;
+ }
+
+
+ #restaurant_2 .restaurant2_ul {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: space-evenly;
+ margin-top: 20px;
+ }
+ #restaurant_2 .restaurant2_ul li img{
+ width : 510px;
+ }
+
+ /* 레스토랑 3 */
+
+ #restaurant_3 h3{
+     font-size: 30px;
+     margin-left: 44px;
+     margin-top: 20px;
+     font-weight: bolder;
+ }
+
+
+ #restaurant_3 .restaurant3_ul {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: space-evenly;
+ margin-top: 20px;
+ }
+ #restaurant_3 .restaurant3_ul li img{
+ width : 510px;
+ }
+
+
+
+ /* 레스토랑 4 */
+
+ #restaurant_4 h3{
+     font-size: 30px;
+     margin-left: 44px;
+     margin-top: 20px;
+     font-weight: bolder;
+ }
+
+
+ #restaurant_4 .restaurant4_ul {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: space-evenly;
+ margin-top: 20px;
+ }
+ #restaurant_4 .restaurant4_ul li img{
+ width : 510px;
+ }
+
+
+ /*  카페 해당 부분  */
+
+
+ div #cafe_1, #cafe_2, #cafe_3, #cafe_4{
+ width: 1165px;
+ height: 700px;
+ border:  1px #eee solid;
+ margin-top: 40px;
+ font-family: 'Noto-sans KR';
+ }
+
+ .cafe h3{
+     font-size: 30px;
+     margin-left: 44px;
+     margin-top: 20px;
+     font-weight: bolder;
+ }
+
+
+ .cafe .cafe_ul {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: space-evenly;
+ margin-top: 20px;
+ }
+ .cafe .cafe_ul li img{
+ width : 510px;
+ height: 340px;
+ }
+
+ .cafe_table {
+ width: 1068px;
+ height: 220px;
+ margin-left: 48px;
+ margin-top: 24px;
+ font-size: 18px;
+ text-align: center;
+ }
+ .cafe_table tbody th, th, tr, td{
+     border: 2px #eee solid;
+ }
+
+
+
+ .cafe_ul {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: space-evenly;
+ margin-top: 20px;
+ } 
+
+
+ /* 편의점 해당 부분  */
+
+ #tab3{
+     display: inline-block;
+ }
+
+ div #convenient_1, #convenient_2{
+ width: 1165px;
+ height: 700px;
+ border:  1px #eee solid;
+
+ font-family: 'Noto-sans KR';
+ }
+
+ #convenient_1{
+     margin-top: 30px;
+ }
+
+ .convenient h3{
+     font-size: 30px;
+     margin-left: 44px;
+     margin-top: 20px;
+     font-weight: bolder;
+ }
+
+
+ .convenient .convenient_ul {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: space-evenly;
+ margin-top: 20px;
+ }
+ .convenient .convenient_ul li img{
+ width : 510px;
+ height: 340px;
+ }
+
+ .convenient_table {
+ width: 1068px;
+ height: 220px;
+ margin-left: 48px;
+ margin-top: 24px;
+ font-size: 18px;
+ text-align: center;
+ }
+ .convenient_table tbody th, th, tr, td{
+     border: 2px #eee solid;
+ }
+
+ .convenient_table  td{
+     font-size: 18px;
+ }
+
+
+ .cafe_ul {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: space-evenly;
+ margin-top: 20px;
+ } 
+
+
+ .facility_Info {
+ font-size: 13px;
+ }

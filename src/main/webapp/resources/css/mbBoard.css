@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+
+
+button {
+    margin: 0;
+}
+button:hover {
+   cursor: pointer;
+}
+
+#totalCount {
+    padding: 20px 0px 10px 0px;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid rgb(201, 201, 201);
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgb(245, 245, 245);
+    height: 50px;
+    font-size: 20px;
+    border-top: 3px solid #005bbb;
+
+}
+
+td {
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+}
+td:first-child {
+    color: #005bbb;
+}
+
+tr:hover {
+    background-color: rgba(187, 187, 187, 0.1);
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+/* 체크박스 */
+td:nth-child(1) {
+    width: 30px;
+}
+
+/* no*/
+td:nth-child(2){
+    width: 70px;
+}
+/* 제목*/
+td:nth-child(3) {
+    text-align: left; 
+    padding-left: 10px;
+    width: 310px;
+}
+/* 내용 */
+td:nth-child(4) {
+    display: table-caption;
+    overflow: hidden;
+
+    text-align: left; 
+    padding-left: 10px;
+    width: 320px;
+}
+td > p {
+    line-height: 40px;
+}
+.ptitle {
+    width: 300px;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 작성자,등록일 */
+td:nth-child(5),td:nth-child(6){
+    width: 125px;
+}
+/* 조회수  */
+td:nth-child(7)  {
+    width: 100px;
+}
+/* 게시판선택 */
+td:nth-child(8) {
+    width: 100px;
+
+}
+
+#searchMenuForm {
+    text-align: center;
+    line-height: 120px;
+    list-style: none;
+    
+}
+
+.searchcss {
+    height: 35px;
+}
+
+
+/* ---------------------페이징-------------------------- */
+
+/* paging */
+#pagination {
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* #pagination ul {
+    width: 310px;
+    height: 32px;
+    margin: 0 auto;
+    
+} */
+#pagination ul {
+    display: flex;
+    justify-content: center;
+
+}
+#pagination li {
+    width: 30px;
+    height: 30px;
+    display: flex;
+
+    font-size: 16px;
+    margin-right: 10px;
+
+    text-align: center;
+    line-height: 30px;
+    flex-direction: column
+}
+
+
+/* 하단 버튼 */
+.reg {
+    margin: 0;
+
+    display: flex;
+    justify-content: flex-end;
+
+    width: 100%;
+}
+
+/* 페이징 버튼 */
+
+.start{
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    border:1px solid #eee;
+
+}
+
+.prev{
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    background-position:-30px;
+    border:1px solid #eee;
+}
+
+.next{		
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    background-position:-60px;
+    border:1px solid #eee;
+
+}
+
+.end{
+    text-indent:-9999em;
+    background-image: url(/resources/img/btn_pagination.png);
+    background-repeat: no-repeat;
+    background-size: 120px 30px;
+    background-position:-90px;
+    border:1px solid #eee;
+
+}
+
+
+/* 현재페이지 버튼 */
+.currPage {
+    height: 30px!important;
+    border: 1px solid #000;
+}
+
+
+
+/* 버튼CSS */
+.buttonstyle {
+    height: 40px;
+    width: 100px;
+    
+    border: 0px;
+    text-align: center;
+
+    background-color: #005bbb;
+    color: #fff;
+    font-size: 15px;
+    
+}
+/* 버튼위치 */
+.getBtn {
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+}

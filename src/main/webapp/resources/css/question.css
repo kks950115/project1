@@ -1,0 +1,133 @@
+@charset "UTF-8";	
+
+#container #content .contentIn #topmenu{
+    margin-top: 40px;
+    /* margin-bottom: 50px; */
+    padding-bottom: 57px;
+    padding-top: 26px;
+}
+#container #content .contentIn #topmenu p{
+    font-size: 35px;
+    font-weight: bold;
+    display: inline;
+    margin-top: 20px;
+    font-family: 'Noto-sans KR';
+}
+
+#container #content .contentIn #topmenu span{
+    font-size: 35px;
+    font-weight: bold;
+    color: #095bba;
+    font-family: 'Noto-sans KR';
+    margin-left: 34px;
+  
+}
+
+/* ------------------라디오 & 체크박스 ------------------------ */
+
+.container {
+    margin: 0 auto;
+    height: 40%;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    font-family: 'Noto-sans KR';
+
+}
+
+#btn-collapse{
+    width: 150px;
+    height: 60px;
+    font-size: large;
+}
+
+.panel-question {
+    margin-bottom: 10px;
+    background-color: #fff;
+    font-size: 25px;
+}
+
+.panel-heading {
+    border-top: gray 1px solid;
+    border-bottom: gray 1px solid;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #eee;
+    color: black;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Noto-sans KR';
+    font-size: 19px;
+}
+
+.panel-heading2 {
+    border-top: gray 1px solid;
+    border-bottom: gray 1px solid;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #eee;
+    color: black;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Noto-sans KR';
+    font-size: 19px;
+}
+
+.panel-body {
+    padding: 25px;
+    display: none;
+}
+
+#btn-collapse {
+    margin-bottom: 10px;
+    background-color: #999;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    float: right;
+}
+
+.active .panel-body{/*active가 있으면 하위의 바디가 보인다.*/
+    display: block;
+  
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Noto-sans KR';
+    
+}
+
+input[type="radio"]{
+display: none;
+}
+
+input[type="radio"] + label{
+    display: inline-block;
+    padding: 9px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(5, 5, 5);
+    cursor: pointer;
+    height: 35px;
+    width: 160px;
+    border: rgba(224, 222, 222, 0.959) 1px line;
+    font-size: 20px;
+    text-align: center;
+}
+input[type="radio"]:checked + label{
+background-color: rgb(241, 238, 238);
+color:#000;
+border-right: #eee 3px solid;
+border-top: #eee 3px solid;
+border-left: ##eee 3px solid;;
+}
+
+.tapmenu > label{
+width: 50px;
+height: 50px;
+border :1px ; 
+}
+
+input[id="tab01"]:checked ~.con1{display: block;}
+input[id="tab02"]:checked ~.con2{display: block;}
+
